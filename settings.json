@@ -1,0 +1,130 @@
+{
+	"[html]": {
+		"editor.defaultformatter": "vscode.html-language-features"
+	},
+	"liveserver.settings.donotverifytags": true,
+	"[javascript]": {
+		"editor.defaultformatter": "vscode.typescript-language-features"
+	},
+	"[css]": {
+		"editor.defaultformatter": "vscode.css-language-features"
+	},
+	"editor.minimap.enabled": false,
+	"terminal.integrated.tabs.enabled": true,
+	"[vue]": {
+		"editor.defaultformatter": "vue.volar",
+		"editor.guides.highlightactivebracketpair": true,
+		"tailwindcss.validate": true,
+		"tailwindcss.colordecorators": true
+	},
+	"[json]": {
+		"editor.defaultformatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultformatter": "vscode.typescript-language-features"
+	},
+	"workbench.editor.untitled.hint": "hidden",
+	"css.validate": false,
+	"scss.validate": false,
+	"workbench.startupEditor": "none",
+	"vim.easymotion": true,
+	"vim.incsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.useCtrlKeys": true,
+	"vim.hlsearch": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"k"
+			],
+			"after": [
+				"<Esc>"
+			]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"d"
+			],
+			"after": [
+				"d",
+				"d"
+			]
+		},
+		{
+			"before": [
+				"<C-n>"
+			],
+			"commands": [
+				":nohl"
+			]
+		},
+		{
+			"before": [
+				"K"
+			],
+			"commands": [
+				"lineBreakInsert"
+			],
+			"silent": true
+		}
+	],
+	"vim.leader": "<space>",
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false
+	},
+	"explorer.fileNesting.enabled": true,
+	// "glassit.alpha": 245,
+	// "stylelint.enable": true,
+	"background.enabled": true,
+	"background.loop": false,
+	"background.useDefault": false,
+	"background.useFront": false,
+	"background.style": {
+		"content": "''",
+		"pointer-events": "none",
+		"position": "absolute",
+		"z-index": "99999",
+		"width": "100%",
+		"height": "100%",
+		"background-size": "cover",
+		"background-repeat": "no-repeat",
+		"background-position": "center",
+		"opacity": 0.1,
+	},
+	"background.customImages": [
+		// "https://www.economist.com/img/b/834/469/90/sites/default/files/images/print-edition/20210703_WID010_0.jpg",
+		// "https://wallpaperset.com/w/full/4/f/0/540727.jpg", // Dante
+		// "https://wallpaperset.com/w/full/8/0/7/540723.jpg", // Vergil
+		"https://wallpaperset.com/w/full/8/8/5/540722.jpg", // Lady
+	],
+	"breadcrumbs.enabled": false,
+	"editor.lineNumbers": "relative",
+	"vim.scroll": 3,
+	"volar.codeLens.scriptSetupTools": true,
+	"volar.icon.splitEditors": false,
+	"zenMode.hideLineNumbers": false,
+	"debug.showInlineBreakpointCandidates": false,
+	"scss.format.spaceAroundSelectorSeparator": true,
+	"workbench.colorTheme": "Vim Dark Hard",
+	"workbench.layoutControl.enabled": false,
+	"window.menuBarVisibility": "toggle",
+	// "editor.folding": false,
+	"editor.glyphMargin": false,
+	"workbench.activityBar.visible": false,
+	// hide node modules
+	"files.exclude": {
+		"**/node_modules": true,
+		"**/package-lock.json": true,
+		"**/*.js": {
+			"when": "$(basename).ts"
+		}
+	},
+	"search.searchOnType": true,
+	"terminal.integrated.gpuAcceleration": "on",
+	"editor.codeLens": false
+}
