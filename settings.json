@@ -1,108 +1,305 @@
 {
-	"vim.easymotion": true,
-	"vim.incsearch": true,
-	"vim.useSystemClipboard": true,
-	"vim.useCtrlKeys": true,
-	"vim.hlsearch": true,
-	"vim.insertModeKeyBindings": [
-		{
-			"before": [
-				"j",
-				"k"
-			],
-			"after": [
-				"<Esc>"
-			]
-		}
-	],
-	"vim.normalModeKeyBindingsNonRecursive": [
-		{
-			"before": [
-				"<leader>",
-				"d"
-			],
-			"after": [
-				"d",
-				"d"
-			]
-		},
-		{
-			"before": [
-				"<C-n>"
-			],
-			"commands": [
-				":nohl"
-			]
-		},
-		{
-			"before": [
-				"K"
-			],
-			"commands": [
-				"lineBreakInsert"
-			],
-			"silent": true
-		}
-	],
-	"vim.leader": "<space>",
-	"vim.handleKeys": {
-		"<C-a>": false,
-		"<C-f>": false
-	},
-	"vim.scroll": 8,
-	"vim.highlightedyank.enable": true,
-	"vim.highlightedyank.textColor": "black",
-	"editor.minimap.enabled": false,
-	"terminal.integrated.tabs.enabled": true,
-	"workbench.editor.untitled.hint": "hidden",
-	"css.validate": false,
-	"scss.validate": false,
-	"workbench.startupEditor": "none",
-	"explorer.fileNesting.enabled": true,
-	"editor.lineNumbers": "relative",
-	"volar.codeLens.scriptSetupTools": true,
-	"zenMode.hideLineNumbers": false,
-	"debug.showInlineBreakpointCandidates": false,
-	"scss.format.spaceAroundSelectorSeparator": true,
-	"editor.glyphMargin": false,
-	"search.searchOnType": true,
-	"terminal.integrated.gpuAcceleration": "on",
-	"editor.codeLens": false,
-	"volar.autoCompleteRefs": true,
-	"volar.preview.transparentGrid": true,
-	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"window.menuBarVisibility": "toggle",
-	"explorer.confirmDelete": false,
-	"html.autoClosingTags": true,
-	"window.titleBarStyle": "native",
-	"terminal.integrated.defaultProfile.windows": "Command Prompt",
-	"breadcrumbs.enabled": false,
-	"html.format.wrapAttributes": "force-expand-multiline",
-	"editor.formatOnSave": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": false,
-		"source.fixAll.eslint": false
-	},
-	"scm.alwaysShowActions": true,
-	"scm.alwaysShowRepositories": true,
-	"git.enableSmartCommit": true,
-	"git.autofetch": true,
-	"glassit-linux.opacity": 95,
-	"explorer.confirmDragAndDrop": false,
-	"gitlens.mode.active": "zen",
-	"window.zoomLevel": 1,
-	"workbench.colorTheme": "Vim Dark Medium",
-	"workbench.activityBar.visible": false,
-	"editor.cursorSurroundingLines": 8,
-	"workbench.editor.showTabs": false,
+  // Vim Settings
+  "vim.scroll": 8,
+  "vim.sneak": true,
+  "vim.foldfix": true,
+  "vim.showcmd": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.easymotion": true,
+  "vim.leader": ",",
+  "vim.useCtrlKeys": true,
+  "vim.overrideCopy": true,
+  "vim.enableNeovim": true,
+  "vim.sneakReplacesF": true,
+  "vim.useSystemClipboard": true,
+  "vim.replaceWithRegister": true,
+  "vim.neovimUseConfigFile": true,
+  "vim.neovimPath": "/snap/bin/nvim",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "black",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-b>": false,
+    "<C-f>": false,
+    "<C-k>": false,
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "f"
+      ],
+      "after": [
+        "s"
+      ],
+    },
+    {
+      "before": [
+        "F"
+      ],
+      "after": [
+        "S"
+      ]
+    },
+    {
+      "before": [
+        "s"
+      ],
+      "after": [],
+    },
+    {
+      "before": [
+        "S"
+      ],
+      "after": [],
+    },
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "workbench.action.files.saveFiles"
+      ]
+    },
+    {
+      "before": [
+        "<C-]>"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<C-[>"
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+    {
+      "before": [
+        "p"
+      ],
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ]
+    }
+  ],
+  "vim.matchpairs": "(:),{:},[:],<:>,>:<",
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors": {
+    "insert": "#090909",
+    "normal": "#010101",
+    "visual": "#030303",
+    "replace": "#040404",
+    "visualline": "#050505",
+    "visualblock": "#060606",
+    "searchinprogressmode": "#070707",
+    "commandlineinprogress": "#080808",
+    "easymotionmode": "#020202"
+  },
+  "vim.commandLineModeKeyBindings": [],
+  // General Editor Settings
+  "editor.codeLens": false,
+  "editor.glyphMargin": false,
+  "editor.formatOnSave": true,
+  "editor.cursorSurroundingLines": 8,
+  "editor.autoIndent": "advanced",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnPaste": true,
+  "editor.fontFamily": "MesloLGS NF",
+  "editor.rulers": [
+    80
+  ],
+  "editor.smoothScrolling": true,
+  "editor.letterSpacing": 1.8,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.scrollbar.horizontalScrollbarSize": 5,
+  "editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": true,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.tabSize": 2,
+  "editor.fontWeight": "bold",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wrappingIndent": "deepIndent",
+  "editor.wordWrap": "bounded",
+  "editor.minimap.maxColumn": 90,
+  "editor.minimap.size": "fill",
+  "editor.minimap.scale": 3,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": true,
+  // Language Specific Settings
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // Workbench and UI Settings
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.centeredLayoutFixedWidth": true,
+  "workbench.tree.indent": 15,
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabSizingFixedMinWidth": 60,
+  "window.density.editorTabHeight": "compact",
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.tabSizing": "shrink",
+  "window.autoDetectHighContrast": false,
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.tabSizingFixedMaxWidth": 180,
+  "zenMode.showTabs": "none",
+  "workbench.editor.showTabs": "none",
+  // Terminal Settings
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  // Git and Version Control
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  // Miscellaneous
+  "css.validate": false,
+  "scss.validate": false,
+  "scss.format.spaceAroundSelectorSeparator": true,
+  "search.searchOnType": true,
+  "zenMode.hideLineNumbers": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "html.autoClosingTags": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "eslint.format.enable": true,
+  "eslint.validate": [],
+  "search.maxResults": 200,
+  "window.title": "${dirty}${activeEditorShort}",
+  "window.titleSeparator": "-",
+  "inlineFold.unfoldedOpacity": 1,
+  "html": {},
+  "workbench.editor.autoLockGroups": {
+    "jsProfileVisualizer.cpuprofile.table": true
+  },
+  // Extension Specific Settings
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#030303",
+    "statusBar.noFolderBackground": "#030303",
+    "statusBar.debuggingBackground": "#030303"
+  },
+  "breadcrumbs.icons": false,
+  "breadcrumbs.showStrings": false,
+  "breadcrumbs.showVariables": false,
+  "breadcrumbs.symbolPath": "off",
+  "editor.stickyScroll.enabled": false,
+  "workbench.tree.enableStickyScroll": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "glassit.alpha": 230,
+  "inlineFold.autoFold": true,
+  "inlineFold.unfoldOnLineSelect": true,
+  // "editor.foldingStrategy": "indentation",
+  "editor.showFoldingControls": "never",
+  "editor.lineNumbers": "relative",
+  // "editor.unfoldOnClickAfterEndOfLine": true,
+  // "editor.foldingImportsByDefault": true,
+  "editor.mouseWheelScrollSensitivity": 3
+
 }
-// "https://www.economist.com/img/b/834/469/90/sites/default/files/images/print-edition/20210703_WID010_0.jpg",
-// "https://wallpaperset.com/w/full/4/f/0/540727.jpg", // Dante
-// "https://wallpapercave.com/wp/wp4095515.jpg", // Dante
-// "https://wallpapercave.com/wp/wp4095428.jpg" // Dante
-// "https://wallpaperset.com/w/full/8/0/7/540723.jpg", // Vergil
-// "https://wallpaperset.com/w/full/8/8/5/540722.jpg", // Lady
-// "https://w0.peakpx.com/wallpaper/966/915/HD-wallpaper-half-evil-333-evil-partial-half-devil.jpg" // 333,
-// "https://wallpaperaccess.com/full/5774236.jpg" // Jelly
