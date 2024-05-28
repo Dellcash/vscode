@@ -26,12 +26,41 @@
     "<C-b>": false,
     "<C-f>": false,
     "<C-k>": false,
+    "<C-l>": false,
+    "<C-h>": false,
   },
   "vim.insertModeKeyBindings": [
     {
       "before": [
         "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "k",
         "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "l",
+        "l"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "h",
+        "h"
       ],
       "after": [
         "<Esc>"
@@ -167,7 +196,6 @@
     }
   ],
   "vim.matchpairs": "(:),{:},[:],<:>,>:<",
-  "vim.statusBarColorControl": true,
   "vim.statusBarColors": {
     "insert": "#090909",
     "normal": "#010101",
@@ -190,10 +218,10 @@
   "editor.formatOnPaste": true,
   "editor.fontFamily": "MesloLGS NF",
   "editor.rulers": [
-    80
+    100
   ],
   "editor.smoothScrolling": true,
-  "editor.letterSpacing": 1.8,
+  "editor.letterSpacing": 2,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit"
@@ -205,25 +233,25 @@
   "editor.tabSize": 2,
   "editor.fontWeight": "bold",
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.wrappingIndent": "deepIndent",
   "editor.wordWrap": "bounded",
-  "editor.minimap.maxColumn": 90,
-  "editor.minimap.size": "fill",
+  "editor.minimap.maxColumn": 190,
   "editor.minimap.scale": 3,
   "editor.minimap.renderCharacters": false,
-  "editor.minimap.enabled": false,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.guides.bracketPairs": true,
+  // "editor.lineNumbers": "relative",
+  "editor.mouseWheelScrollSensitivity": 3,
   // Language Specific Settings
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.guides.indentation": false
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.guides.indentation": false
   },
   // Workbench and UI Settings
   "workbench.startupEditor": "none",
@@ -231,9 +259,8 @@
   "workbench.editor.empty.hint": "hidden",
   "workbench.activityBar.location": "hidden",
   "workbench.editor.centeredLayoutFixedWidth": true,
-  "workbench.tree.indent": 15,
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0.7,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.tabSizingFixedMinWidth": 60,
   "window.density.editorTabHeight": "compact",
@@ -269,7 +296,7 @@
   "eslint.format.enable": true,
   "eslint.validate": [],
   "search.maxResults": 200,
-  "window.title": "${dirty}${activeEditorShort}",
+  "window.title": "${dirty}${activeEditorMedium}",
   "window.titleSeparator": "-",
   "inlineFold.unfoldedOpacity": 1,
   "html": {},
@@ -283,7 +310,9 @@
   "workbench.colorCustomizations": {
     "statusBar.background": "#030303",
     "statusBar.noFolderBackground": "#030303",
-    "statusBar.debuggingBackground": "#030303"
+    "statusBar.debuggingBackground": "#030303",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
   },
   "breadcrumbs.icons": false,
   "breadcrumbs.showStrings": false,
@@ -295,11 +324,39 @@
   "glassit.alpha": 230,
   "inlineFold.autoFold": true,
   "inlineFold.unfoldOnLineSelect": true,
-  // "editor.foldingStrategy": "indentation",
+  "ClockAndBattery.battery.active": false,
+  "statusbar-quotes.display-seconds": 60,
+  "vim.statusBarColorControl": true,
+  "editor.wrappingIndent": "deepIndent",
+  "editor.wordWrapColumn": 100,
+  "vim.textwidth": 100,
+  "editor.minimap.showSlider": "always",
+  "statusbar-quotes.display-shuffle-button": false,
+  "editor.minimap.enabled": false,
+  "files.autoSave": "onFocusChange",
+  "window.zoomPerWindow": false,
+  "breadcrumbs.enabled": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "editor.lineHeight": 20,
+  "editor.lineNumbers": "off",
+  "workbench.tips.enabled": false,
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.editor.enablePreview": false,
+  "problems.decorations.enabled": false,
+  "editor.fontLigatures": true,
+  "editor.colorDecorators": false,
+  "diffEditor.renderSideBySide": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "vue.format.template.initialIndent": false,
+  "vue.autoInsert.dotValue": true,
+  // "editor.guides.bracketPairsHorizontal": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": false,
   "editor.showFoldingControls": "never",
-  "editor.lineNumbers": "relative",
-  // "editor.unfoldOnClickAfterEndOfLine": true,
-  // "editor.foldingImportsByDefault": true,
-  "editor.mouseWheelScrollSensitivity": 3
-
+  "editor.renderLineHighlight": "none",
+  "workbench.productIconTheme": "bongocat",
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.inlineCompletionsAccessibilityVerbose": true
 }
