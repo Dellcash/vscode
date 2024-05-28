@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaultsauto[]
 [
     {
         "key": "ctrl+j",
@@ -133,10 +134,10 @@
         "key": "ctrl+shift+7",
         "command": "workbench.action.openEditorAtIndex7"
     },
-    {
-        "key": "ctrl+shift+w",
-        "command": "-workbench.action.closeWindow"
-    },
+    // {
+    //     "key": "ctrl+shift+w",
+    //     "command": "-workbench.action.closeWindow"
+    // },
     {
         "key": "ctrl+shift+w",
         "command": "workbench.action.moveEditorToNewWindow"
@@ -171,11 +172,11 @@
         "command": "workbench.view.scm",
         "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
     },
-    {
-        "key": "ctrl+shift+g g",
-        "command": "-workbench.view.scm",
-        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-    },
+    // {
+    //     "key": "ctrl+shift+g g",
+    //     "command": "-workbench.view.scm",
+    //     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    // },
     {
         "key": "ctrl+f ctrl+0",
         "command": "editor.foldAll",
@@ -307,14 +308,6 @@
         "when": "editorTextFocus && foldingEnabled"
     },
     {
-        "key": "ctrl+h",
-        "command": "workbench.action.focusNextGroup"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.focusPreviousGroup"
-    },
-    {
         "key": "ctrl+1",
         "command": "workbench.action.focusFirstEditorGroup"
     },
@@ -344,23 +337,72 @@
         "command": "betterFolding.clearZenFolds"
     },
     {
-    "key": "ctrl+d",
-    "command": "cursorMove",
-    "args": {
-        "to": "down",
-        "by": "wrappedLine",
-        "value": 10
-    },
-    "when": "editorTextFocus && !editorHasSelection"
+        "key": "ctrl+d",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "wrappedLine",
+            "value": 10
+        },
+        "when": "editorTextFocus && !editorHasSelection"
     },
     {
-    "key": "ctrl+u",
-    "command": "cursorMove",
-    "args": {
-        "to": "up",
-        "by": "wrappedLine",
-        "value": 10
+        "key": "ctrl+u",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "wrappedLine",
+            "value": 10
+        },
+        "when": "editorTextFocus && !editorHasSelection"
     },
-    "when": "editorTextFocus && !editorHasSelection"
+    {
+		"key": "ctrl+f r",
+		"command": "editor.action.startFindReplaceAction",
+		"when": "editorFocus || editorIsOpen"
     },
+    {
+		"key": "d",
+		"command": "deleteFile",
+		"when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "cursorLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+s",
+        "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    // {
+    //     "key": "ctrl+k",
+    //     "command": "cursorup",
+    //     "when": "textInputFocus"
+    // },
+    // {
+    //     "key": "ctrl+j",
+    //     "command": "cursorBottom",
+    //     "when": "textInputFocus"
+    // }
+    // {
+    //     "key": "right",
+    //     "command": "-cursorRight",
+    //     "when": "textInputFocus"
+    // },
+// {
+// "key": "ctrl+l",
+// 		"command": "workbench.action.navigateRight",
+// 		"when": "vim.active && vim.mode!='Insert'"
+// },
+// {
+//     "key": "right",
+//     "command": "extension.vim_right",
+//     "when": "editorTextFocus && vim.active && vim.mode == 'Insert'"
+// }
 ]
