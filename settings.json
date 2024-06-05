@@ -65,6 +65,24 @@
       "after": [
         "<Esc>"
       ]
+    },
+    {
+      "before": [
+        "e",
+        "e"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "b",
+        "b"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -217,11 +235,9 @@
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnPaste": true,
   "editor.fontFamily": "MesloLGS NF",
-  "editor.rulers": [
-    100
-  ],
+  "editor.rulers": [100],
   "editor.smoothScrolling": true,
-  "editor.letterSpacing": 2,
+  "editor.letterSpacing": 2.5,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit"
@@ -241,48 +257,63 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   // "editor.lineNumbers": "relative",
   "editor.mouseWheelScrollSensitivity": 3,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.inlineCompletionsAccessibilityVerbose": true,
+  "editor.minimap.size": "fill",
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": false,
+  "editor.showFoldingControls": "never",
+  "editor.renderLineHighlight": "none",
+  "editor.fontLigatures": true,
+  "editor.colorDecorators": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.wrappingIndent": "deepIndent",
+  "editor.wordWrapColumn": 100,
+  "editor.minimap.showSlider": "always",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.minimap.enabled": true,
+  "editor.overviewRulerBorder": false,
+  "editor.lineHeight": 20,
+  "editor.lineNumbers": "relative",
   // Language Specific Settings
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.guides.indentation": false
+    "editor.guides.indentation": false,
+    "editor.letterSpacing": 0.1,
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "off",
+    "editor.rulers": [
+      86
+    ],
   },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.guides.indentation": false
   },
-  // Workbench and UI Settings
-  "workbench.startupEditor": "none",
-  "workbench.sideBar.location": "right",
-  "workbench.editor.empty.hint": "hidden",
-  "workbench.activityBar.location": "hidden",
-  "workbench.editor.centeredLayoutFixedWidth": true,
+  
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0.7,
-  "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.tabSizingFixedMinWidth": 60,
   "window.density.editorTabHeight": "compact",
-  "workbench.list.smoothScrolling": true,
-  "workbench.editor.tabSizing": "shrink",
   "window.autoDetectHighContrast": false,
   "window.commandCenter": false,
   "window.menuBarVisibility": "compact",
-  "workbench.layoutControl.enabled": false,
-  "workbench.editor.tabSizingFixedMaxWidth": 180,
   "zenMode.showTabs": "none",
-  "workbench.editor.showTabs": "none",
+
   // Terminal Settings
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
   // Git and Version Control
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
+
   // Miscellaneous
   "css.validate": false,
   "scss.validate": false,
@@ -300,26 +331,16 @@
   "window.titleSeparator": "-",
   "inlineFold.unfoldedOpacity": 1,
   "html": {},
-  "workbench.editor.autoLockGroups": {
-    "jsProfileVisualizer.cpuprofile.table": true
-  },
+  
   // Extension Specific Settings
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#030303",
-    "statusBar.noFolderBackground": "#030303",
-    "statusBar.debuggingBackground": "#030303",
-    "statusBar.foreground": "#ffffff",
-    "statusBar.debuggingForeground": "#ffffff"
-  },
+  
   "breadcrumbs.icons": false,
   "breadcrumbs.showStrings": false,
   "breadcrumbs.showVariables": false,
   "breadcrumbs.symbolPath": "off",
-  "editor.stickyScroll.enabled": false,
-  "workbench.tree.enableStickyScroll": false,
   "typescript.disableAutomaticTypeAcquisition": true,
   "glassit.alpha": 230,
   "inlineFold.autoFold": true,
@@ -327,36 +348,44 @@
   "ClockAndBattery.battery.active": false,
   "statusbar-quotes.display-seconds": 60,
   "vim.statusBarColorControl": true,
-  "editor.wrappingIndent": "deepIndent",
-  "editor.wordWrapColumn": 100,
   "vim.textwidth": 100,
-  "editor.minimap.showSlider": "always",
   "statusbar-quotes.display-shuffle-button": false,
-  "editor.minimap.enabled": false,
   "files.autoSave": "onFocusChange",
   "window.zoomPerWindow": false,
   "breadcrumbs.enabled": false,
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.overviewRulerBorder": false,
-  "editor.lineHeight": 20,
-  "editor.lineNumbers": "off",
-  "workbench.tips.enabled": false,
-  "workbench.tree.indent": 15,
-  "workbench.tree.renderIndentGuides": "none",
-  "workbench.editor.enablePreview": false,
+  
   "problems.decorations.enabled": false,
-  "editor.fontLigatures": true,
-  "editor.colorDecorators": false,
   "diffEditor.renderSideBySide": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "vue.format.template.initialIndent": false,
   "vue.autoInsert.dotValue": true,
-  // "editor.guides.bracketPairsHorizontal": true,
-  "editor.guides.bracketPairs": true,
-  "editor.guides.indentation": false,
-  "editor.showFoldingControls": "never",
-  "editor.renderLineHighlight": "none",
-  "workbench.productIconTheme": "bongocat",
-  "editor.guides.highlightActiveIndentation": false,
-  "editor.inlineCompletionsAccessibilityVerbose": true
+
+  // WORKBENCH AND UI SETTINGS
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tips.enabled": false,
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.centeredLayoutFixedWidth": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabSizingFixedMinWidth": 60,
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.showTabs": "none",
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.tabSizingFixedMaxWidth": 180,
+  "workbench.editor.autoLockGroups": {
+    "jsProfileVisualizer.cpuprofile.table": true
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#010101",
+    "statusBar.noFolderBackground": "#010101",
+    "statusBar.debuggingBackground": "#010101",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
 }
