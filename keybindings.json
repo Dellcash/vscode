@@ -1,340 +1,389 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
     {
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
-        "when": "suggestWidgetVisible"
+        "when": "suggestWidgetVisible",
+        "comment": "Select the next suggestion in the suggestion widget."
     },
     {
         "key": "ctrl+k",
         "command": "selectPrevSuggestion",
-        "when": "suggestWidgetVisible"
+        "when": "suggestWidgetVisible",
+        "comment": "Select the previous suggestion in the suggestion widget."
     },
     {
         "key": "ctrl+j",
         "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly && vim.active && vim.mode == 'Normal'"
+        "when": "editorTextFocus && !editorReadonly && vim.active && vim.mode == 'Normal'",
+        "comment": "Move the current line down, specifically when Vim mode is active."
     },
     {
         "key": "ctrl+k",
         "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly && vim.active && vim.mode == 'Normal'"
+        "when": "editorTextFocus && !editorReadonly && vim.active && vim.mode == 'Normal'",
+        "comment": "Move the current line up, specifically when Vim mode is active."
     },
     {
         "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
+        "when": "inQuickOpen",
+        "comment": "Navigate to the next item in the quick open menu."
     },
     {
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
+        "when": "inQuickOpen",
+        "comment": "Navigate to the previous item in the quick open menu."
     },
     {
         "key": "ctrl+b",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "!explorerViewletVisible && !searchViewletVisible && !debugViewletVisible"
+        "when": "!explorerViewletVisible && !searchViewletVisible && !debugViewletVisible",
+        "comment": "Toggle the visibility of the sidebar when no specific viewlet is visible."
     },
     {
         "key": "ctrl+e",
-        "command": "-actions.findWithSelection"
+        "command": "-actions.findWithSelection",
+        "comment": "Remove the default find with selection action."
     },
     {
         "key": "ctrl+e",
-        "command": "workbench.view.explorer"
+        "command": "workbench.view.explorer",
+        "comment": "Open the Explorer view in the sidebar."
     },
     {
         "key": "r",
         "command": "renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus",
+        "comment": "Rename the selected file in the Explorer view."
     },
     {
         "key": "ctrl+w",
         "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"
+        "when": "terminalFocus",
+        "comment": "Close the active terminal."
     },
     {
         "key": "ctrl+n",
         "command": "explorer.newFile",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus",
+        "comment": "Create a new file in the Explorer."
     },
     {
         "key": "ctrl+i",
         "command": "workbench.action.problems.focus",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetVisible"
+        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetVisible",
+        "comment": "Focus on the Problems view, useful in Vim mode."
     },
     {
         "key": "ctrl+f o",
         "command": "extension.vim_ctrl+p",
-        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'",
+        "comment": "Trigger the Vim extension's Ctrl+P command, often used for fuzzy file search."
     },
     {
         "key": "ctrl+p",
         "command": "-extension.vim_ctrl+p",
-        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'",
+        "comment": "Remove the Vim extension's Ctrl+P command."
     },
     {
         "key": "ctrl+shift+n",
-        "command": "extension.simpleNewFile"
+        "command": "extension.simpleNewFile",
+        "comment": "Create a new file using the simple new file extension."
     },
     {
         "key": "ctrl+alt+n",
-        "command": "-extension.simpleNewFile"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "list.collapse",
-        "when": "listFocus && !inputFocus"
+        "command": "-extension.simpleNewFile",
+        "comment": "Remove the simple new file command."
     },
     {
         "key": "ctrl+shift+d",
         "command": "editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
+        "when": "editorFocus",
+        "comment": "Add the next match of the current selection to the selection."
     },
     {
         "key": "ctrl+d",
         "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
+        "when": "editorFocus",
+        "comment": "Remove the add selection to next find match command."
     },
     {
         "key": "escape",
         "command": "extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && !parameterHintsVisible && !suggestWidgetVisible"
+        "when": "editorTextFocus && vim.active && !inDebugRepl && !parameterHintsVisible && !suggestWidgetVisible",
+        "comment": "Exit insert mode in Vim or cancel certain UI elements."
     },
     {
         "key": "escape",
         "command": "-extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        "when": "editorTextFocus && vim.active && !inDebugRepl",
+        "comment": "Remove the Vim escape command."
     },
     {
         "key": "ctrl+shift+1",
-        "command": "workbench.action.openEditorAtIndex1"
+        "command": "workbench.action.openEditorAtIndex1",
+        "comment": "Open the first editor in the group."
     },
     {
         "key": "ctrl+shift+2",
-        "command": "workbench.action.openEditorAtIndex2"
+        "command": "workbench.action.openEditorAtIndex2",
+        "comment": "Open the second editor in the group."
     },
     {
         "key": "ctrl+shift+3",
-        "command": "workbench.action.openEditorAtIndex3"
+        "command": "workbench.action.openEditorAtIndex3",
+        "comment": "Open the third editor in the group."
     },
     {
         "key": "ctrl+shift+4",
-        "command": "workbench.action.openEditorAtIndex4"
+        "command": "workbench.action.openEditorAtIndex4",
+        "comment": "Open the fourth editor in the group."
     },
     {
         "key": "ctrl+shift+5",
-        "command": "workbench.action.openEditorAtIndex5"
+        "command": "workbench.action.openEditorAtIndex5",
+        "comment": "Open the fifth editor in the group."
     },
     {
         "key": "ctrl+shift+6",
-        "command": "workbench.action.openEditorAtIndex6"
+        "command": "workbench.action.openEditorAtIndex6",
+        "comment": "Open the sixth editor in the group."
     },
     {
         "key": "ctrl+shift+7",
-        "command": "workbench.action.openEditorAtIndex7"
+        "command": "workbench.action.openEditorAtIndex7",
+        "comment": "Open the seventh editor in the group."
     },
-    // {
-    //     "key": "ctrl+shift+w",
-    //     "command": "-workbench.action.closeWindow"
-    // },
     {
         "key": "ctrl+shift+w",
-        "command": "workbench.action.moveEditorToNewWindow"
+        "command": "workbench.action.moveEditorToNewWindow",
+        "comment": "Move the current editor to a new window."
     },
     {
         "key": "ctrl+shift+alt+c",
-        "command": "workbench.action.clearRecentFiles"
+        "command": "workbench.action.clearRecentFiles",
+        "comment": "Clear the list of recent files."
     },
     {
         "key": "ctrl+shift+alt+c",
         "command": "-copyRelativeFilePath",
-        "when": "!editorFocus"
+        "when": "!editorFocus",
+        "comment": "Remove the command to copy the relative file path."
     },
     {
         "key": "ctrl+shift+alt+f",
-        "command": "inlineFold.toggle"
+        "command": "inlineFold.toggle",
+        "comment": "Toggle inline folding in the editor."
     },
     {
         "key": "ctrl+shift+alt+n",
-        "command": "notifications.clearAll"
+        "command": "notifications.clearAll",
+        "comment": "Clear all notifications."
     },
     {
         "key": "ctrl+shift+alt+[",
-        "command": "editor.gotoNextFold"
+        "command": "editor.gotoNextFold",
+        "comment": "Navigate to the next fold in the editor."
     },
     {
         "key": "ctrl+shift+alt+]",
-        "command": "editor.gotoPreviousFold"
+        "command": "editor.gotoPreviousFold",
+        "comment": "Navigate to the previous fold in the editor."
     },
     {
         "key": "ctrl+shift+alt+g",
         "command": "workbench.view.scm",
-        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'",
+        "comment": "Open the Source Control view when specific GitLens conditions are met."
     },
-    // {
-    //     "key": "ctrl+shift+g g",
-    //     "command": "-workbench.view.scm",
-    //     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-    // },
     {
         "key": "ctrl+f ctrl+0",
         "command": "editor.foldAll",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+0",
         "command": "-editor.foldAll",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold all command."
     },
     {
         "key": "ctrl+f ctrl+/",
         "command": "editor.foldAllBlockComments",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all block comments in the editor."
     },
     {
         "key": "ctrl+k ctrl+/",
         "command": "-editor.foldAllBlockComments",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold all block comments command."
     },
     {
         "key": "ctrl+f ctrl+-",
         "command": "editor.foldAllExcept",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all regions except the current one."
     },
     {
         "key": "ctrl+k ctrl+-",
         "command": "-editor.foldAllExcept",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold all except command."
     },
     {
         "key": "ctrl+f ctrl+-",
         "command": "editor.foldAllMarkerRegions",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all marker regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+8",
         "command": "-editor.foldAllMarkerRegions",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold all marker regions command."
     },
     {
         "key": "ctrl+f ctrl+1",
         "command": "editor.foldLevel1",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 1 regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+1",
         "command": "-editor.foldLevel1",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 1 command."
     },
     {
         "key": "ctrl+f ctrl+2",
         "command": "editor.foldLevel2",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 2 regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+2",
         "command": "-editor.foldLevel2",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 2 command."
     },
     {
         "key": "ctrl+f ctrl+3",
         "command": "editor.foldLevel3",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 3 regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+3",
         "command": "-editor.foldLevel3",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 3 command."
     },
     {
         "key": "ctrl+f ctrl+4",
         "command": "editor.foldLevel4",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 4 regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+4",
         "command": "-editor.foldLevel4",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 4 command."
     },
     {
         "key": "ctrl+f ctrl+5",
         "command": "editor.foldLevel5",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 5 regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+5",
         "command": "-editor.foldLevel5",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 5 command."
     },
     {
         "key": "ctrl+f ctrl+6",
         "command": "editor.foldLevel6",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 6 regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+6",
         "command": "-editor.foldLevel6",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 6 command."
     },
     {
         "key": "ctrl+f ctrl+7",
         "command": "editor.foldLevel7",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 7 regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+7",
         "command": "-editor.foldLevel7",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 7 command."
     },
     {
         "key": "ctrl+f ctrl+j",
         "command": "editor.unfoldAll",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Unfold all regions in the editor."
     },
     {
         "key": "ctrl+k ctrl+j",
         "command": "-editor.unfoldAll",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the unfold all command."
     },
     {
         "key": "ctrl+f ctrl+r",
         "command": "editor.toggleFold",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Toggle the fold state of the current region."
     },
     {
         "key": "ctrl+k ctrl+l",
         "command": "-editor.toggleFold",
-        "when": "editorTextFocus && foldingEnabled"
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the toggle fold command."
     },
     {
         "key": "ctrl+1",
-        "command": "workbench.action.focusFirstEditorGroup"
+        "command": "workbench.action.focusFirstEditorGroup",
+        "comment": "Focus on the first editor group."
     },
     {
         "key": "ctrl+1",
-        "command": "-workbench.action.focusFirstEditorGroup"
+        "command": "-workbench.action.focusFirstEditorGroup",
+        "comment": "Remove the command to focus on the first editor group."
     },
     {
         "key": "ctrl+k ctrl+shift+\\",
         "command": "-workbench.action.splitEditorInGroup",
-        "when": "activeEditorCanSplitInGroup"
+        "when": "activeEditorCanSplitInGroup",
+        "comment": "Remove the command to split the editor in the group."
     },
     {
         "key": "ctrl+shift+alt+v",
-        "command": "vue.action.splitEditors"
+        "command": "vue.action.splitEditors",
+        "comment": "Split editors using the Vue extension."
     },
     {
         "key": "ctrl+2",
-        "command": "workbench.action.focusOtherSideEditor"
+        "command": "workbench.action.focusOtherSideEditor",
+        "comment": "Focus on the editor on the other side."
     },
     {
         "key": "ctrl+shift+alt+z",
-        "command": "betterFolding.createZenFoldsAroundSelection"
-    },
-    {
-        "key": "ctrl+c ctrl+z",
-        "command": "betterFolding.clearZenFolds"
+        "command": "betterFolding.createZenFoldsAroundSelection",
+        "comment": "Create Zen folds around the current selection."
     },
     {
         "key": "ctrl+d",
@@ -342,9 +391,10 @@
         "args": {
             "to": "down",
             "by": "wrappedLine",
-            "value": 10
+            "value": 8
         },
-        "when": "editorTextFocus && !editorHasSelection"
+        "when": "editorTextFocus && !editorHasSelection",
+        "comment": "Move the cursor down by 8 wrapped lines."
     },
     {
         "key": "ctrl+u",
@@ -352,57 +402,166 @@
         "args": {
             "to": "up",
             "by": "wrappedLine",
-            "value": 10
+            "value": 8
         },
-        "when": "editorTextFocus && !editorHasSelection"
-    },
-    {
-		"key": "ctrl+f r",
-		"command": "editor.action.startFindReplaceAction",
-		"when": "editorFocus || editorIsOpen"
-    },
-    {
-		"key": "d",
-		"command": "deleteFile",
-		"when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "cursorRight",
-        "when": "textInputFocus"
+        "when": "editorTextFocus && !editorHasSelection",
+        "comment": "Move the cursor up by 8 wrapped lines."
     },
     {
         "key": "ctrl+h",
         "command": "cursorLeft",
-        "when": "textInputFocus"
+        "when": "editorTextFocus",
+        "comment": "Move the cursor left."
+    },
+    {
+        "key": "ctrl+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus",
+        "comment": "Move the cursor right."
+    },
+    {
+        "key": "ctrl+f r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen",
+        "comment": "Start the find and replace action."
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && !inputFocus",
+        "comment": "Delete the selected file in the Explorer."
     },
     {
         "key": "ctrl+shift+alt+s",
-        "command": "workbench.action.toggleStatusbarVisibility"
+        "command": "workbench.action.toggleStatusbarVisibility",
+        "comment": "Toggle the visibility of the status bar."
     },
-    // {
-    //     "key": "ctrl+k",
-    //     "command": "cursorup",
-    //     "when": "textInputFocus"
-    // },
-    // {
-    //     "key": "ctrl+j",
-    //     "command": "cursorBottom",
-    //     "when": "textInputFocus"
-    // }
-    // {
-    //     "key": "right",
-    //     "command": "-cursorRight",
-    //     "when": "textInputFocus"
-    // },
-// {
-// "key": "ctrl+l",
-// 		"command": "workbench.action.navigateRight",
-// 		"when": "vim.active && vim.mode!='Insert'"
-// },
-// {
-//     "key": "right",
-//     "command": "extension.vim_right",
-//     "when": "editorTextFocus && vim.active && vim.mode == 'Insert'"
-// }
+    {
+        "key": "ctrl+shift+alt+x",
+        "command": "github.copilot.interactiveEditor.fix",
+        "comment": "Trigger the GitHub Copilot interactive editor to fix code."
+    },
+    {
+        "key": "ctrl+left",
+        "command": "-gitlens.key.ctrl+left",
+        "when": "gitlens:key:ctrl+left",
+        "comment": "Remove the GitLens command for Ctrl+Left."
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-extension.vim_navigateCtrlL",
+        "when": "editorTextFocus && vim.active && vim.use<C-l> && !inDebugRepl",
+        "comment": "Remove the Vim navigation command for Ctrl+L."
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-notebook.centerActiveCell",
+        "when": "notebookEditorFocused",
+        "comment": "Remove the command to center the active cell in a notebook."
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus",
+        "comment": "Remove the command to expand the line selection."
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-workbench.action.chat.newChat",
+        "when": "chatIsEnabled && inChat",
+        "comment": "Remove the command to start a new chat."
+    },
+    {
+        "key": "ctrl+home",
+        "command": "-extension.vim_ctrl+home",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
+        "comment": "Remove the Vim command for Ctrl+Home."
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-extension.vim_ctrl+h",
+        "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl",
+        "comment": "Remove the Vim command for Ctrl+H."
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen",
+        "comment": "Remove the command to start find and replace."
+    },
+    {
+        "key": "ctrl+shift+alt+w",
+        "command": "workbench.action.reloadWindow",
+        "when": "isWorkspaceTrustEnabled",
+        "comment": "Reload the window when workspace trust is enabled."
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment",
+        "comment": "Remove the command to reload the window in development mode."
+    },
+    {
+        "key": "ctrl+shift+alt+h h",
+        "command": "easy-highlight.Highlight",
+        "comment": "Highlight the selected text using the Easy Highlight extension."
+    },
+    {
+        "key": "ctrl+shift+alt+h r",
+        "command": "easy-highlight.RemoveHighlight",
+        "comment": "Remove the highlight from the selected text using the Easy Highlight extension."
+    },
+    {
+        "key": "ctrl+shift+alt+h a",
+        "command": "easy-highlight.RemoveAllHighlights",
+        "comment": "Remove all highlights in the editor using the Easy Highlight extension."
+    },
+    {
+        "key": "alt+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && vim.mode == 'Insert'",
+        "comment": "Paste from the clipboard in Vim insert mode."
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && vim.mode == 'Insert'",
+        "comment": "Remove the default paste command in Vim insert mode."
+    },
+    {
+        "key": "alt+z",
+        "command": "undo",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
+        "comment": "Undo the last action in Vim insert or normal mode."
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-undo",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
+        "comment": "Remove the default undo command in Vim insert or normal mode."
+    },
+    {
+        "key": "alt+shift+z",
+        "command": "redo",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
+        "comment": "Redo the last undone action in Vim insert or normal mode."
+    },
+    {
+        "key": "ctrl+shift+z",
+        "command": "-redo",
+        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
+        "comment": "Remove the default redo command in Vim insert or normal mode."
+    },
+    {
+        "key": "alt+backspace",
+        "command": "deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly",
+        "comment": "Delete the word to the left of the cursor."
+    },
+    {
+        "key": "alt+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly",
+        "comment": "Comment or uncomment the current line."
+    }
 ]
