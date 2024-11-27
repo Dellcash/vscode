@@ -194,7 +194,7 @@
         "comment": "Navigate to the previous fold in the editor."
     },
     {
-        "key": "ctrl+shift+alt+g",
+        "key": "alt+g",
         "command": "workbench.view.scm",
         "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'",
         "comment": "Open the Source Control view when specific GitLens conditions are met."
@@ -610,5 +610,13 @@
         "key": "alt+f3",
         "command": "-editor.action.dirtydiff.next",
         "when": "editorTextFocus && !textCompareEditorActive"
-    }
+    },
+    {
+        "key": "shift+;",
+        "command": "vim.showQuickpickCmdLine"
+    },
+    {
+        "key": "alt+s",
+        "command": "gitlens.gitCommands.status"
+    },
 ]
