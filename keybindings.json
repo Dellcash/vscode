@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaultsauto[]
 [
     {
         "key": "ctrl+j",
@@ -331,6 +332,18 @@
         "comment": "Remove the fold level 7 command."
     },
     {
+        "key": "ctrl+f ctrl+8",
+        "command": "editor.foldLevel8",
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Fold all level 8 regions in the editor."
+    },
+    {
+        "key": "ctrl+k ctrl+8",
+        "command": "-editor.foldLevel8",
+        "when": "editorTextFocus && foldingEnabled",
+        "comment": "Remove the fold level 8 command."
+    },
+    {
         "key": "ctrl+f ctrl+j",
         "command": "editor.unfoldAll",
         "when": "editorTextFocus && foldingEnabled",
@@ -492,7 +505,6 @@
     {
         "key": "ctrl+shift+alt+w",
         "command": "workbench.action.reloadWindow",
-        "when": "isWorkspaceTrustEnabled",
         "comment": "Reload the window when workspace trust is enabled."
     },
     {
@@ -502,66 +514,101 @@
         "comment": "Remove the command to reload the window in development mode."
     },
     {
-        "key": "ctrl+shift+alt+h h",
-        "command": "easy-highlight.Highlight",
-        "comment": "Highlight the selected text using the Easy Highlight extension."
-    },
-    {
-        "key": "ctrl+shift+alt+h r",
-        "command": "easy-highlight.RemoveHighlight",
-        "comment": "Remove the highlight from the selected text using the Easy Highlight extension."
-    },
-    {
-        "key": "ctrl+shift+alt+h a",
-        "command": "easy-highlight.RemoveAllHighlights",
-        "comment": "Remove all highlights in the editor using the Easy Highlight extension."
-    },
-    {
         "key": "alt+v",
         "command": "editor.action.clipboardPasteAction",
         "when": "editorTextFocus && vim.mode == 'Insert'",
         "comment": "Paste from the clipboard in Vim insert mode."
     },
     {
-        "key": "ctrl+v",
-        "command": "-editor.action.clipboardPasteAction",
-        "when": "editorTextFocus && vim.mode == 'Insert'",
-        "comment": "Remove the default paste command in Vim insert mode."
+        "key": "ctrl+shift+n",
+        "command": "workbench.action.focusNextGroup"
     },
     {
-        "key": "alt+z",
-        "command": "undo",
-        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
-        "comment": "Undo the last action in Vim insert or normal mode."
+        "key": "ctrl+shift+alt+l",
+        "command": "-workbench.action.quickchat.toggle",
+        "when": "chatIsEnabled"
     },
     {
-        "key": "ctrl+z",
-        "command": "-undo",
-        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
-        "comment": "Remove the default undo command in Vim insert or normal mode."
+        "key": "ctrl+shift+alt+i",
+        "command": "-workbench.action.chat.openEditSession",
+        "when": "chatEditingParticipantRegistered && chatIsEnabled && view != 'workbench.panel.chat.view.edits'"
     },
     {
-        "key": "alt+shift+z",
-        "command": "redo",
-        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
-        "comment": "Redo the last undone action in Vim insert or normal mode."
+        "key": "ctrl+shift+alt+k",
+        "command": "vim.remap",
+        "args": {
+            "after": [
+                "<leader>",
+                "<leader>",
+                "k"
+            ]
+        },
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
-        "key": "ctrl+shift+z",
-        "command": "-redo",
-        "when": "editorTextFocus && (vim.mode == 'Insert' || vim.mode == 'Normal')",
-        "comment": "Remove the default redo command in Vim insert or normal mode."
+        "key": "ctrl+shift+alt+j",
+        "command": "vim.remap",
+        "args": {
+            "after": [
+                "<leader>",
+                "<leader>",
+                "j"
+            ]
+        },
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
-        "key": "alt+backspace",
-        "command": "deleteWordLeft",
-        "when": "textInputFocus && !editorReadonly",
-        "comment": "Delete the word to the left of the cursor."
+        "key": "ctrl+shift+alt+h",
+        "command": "vim.remap",
+        "args": {
+            "after": [
+                "<leader>",
+                "<leader>",
+                "h"
+            ]
+        },
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
-        "key": "alt+/",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly",
-        "comment": "Comment or uncomment the current line."
+        "key": "ctrl+shift+alt+l",
+        "command": "vim.remap",
+        "args": {
+            "after": [
+                "<leader>",
+                "<leader>",
+                "l"
+            ]
+        },
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+shift+/",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "-editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+z",
+        "command": "workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "alt+c",
+        "command": "editor.action.dirtydiff.next",
+        "when": "editorTextFocus && !textCompareEditorActive"
+    },
+    {
+        "key": "alt+f3",
+        "command": "-editor.action.dirtydiff.next",
+        "when": "editorTextFocus && !textCompareEditorActive"
     }
 ]
