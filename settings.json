@@ -185,18 +185,19 @@
     }
   ],
   "vim.matchpairs": "(:),{:},[:],<:>,>:<",
-  "vim.statusBarColors": {
-    "insert": "#090909",
-    "normal": "#010101",
-    "visual": "#030303",
-    "replace": "#040404",
-    "visualline": "#050505",
-    "visualblock": "#060606",
-    "searchinprogressmode": "#070707",
-    "commandlineinprogress": "#080808",
-    "easymotionmode": "#020202"
-  },
-  "vim.commandLineModeKeyBindings": [],
+  "vim.commandLineModeKeyBindings": [
+    {
+      "before": [
+        ":"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.showCommands",
+          "args": []
+        }
+      ]
+    }
+  ],
   // General Editor Settings
   "editor.codeLens": false,
   "editor.glyphMargin": false,
@@ -332,19 +333,12 @@
   "workbench.editor.autoLockGroups": {
     "jsProfileVisualizer.cpuprofile.table": true
   },
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#010101",
-    "statusBar.noFolderBackground": "#010101",
-    "statusBar.debuggingBackground": "#010101"
-  },
   "window.customTitleBarVisibility": "auto",
   "http.proxy": "http://127.0.0.1:20171",
   "http.proxyStrictSSL": false,
   "workbench.editor.editorActionsLocation": "hidden",
   "inlineFold.unfoldOnLineSelect": true,
   "editor.showFoldingControls": "never",
-  // "editor.experimentalInlineEdit.enabled": true,
-  // "editor.experimentalInlineEdit.backgroundColoring": true,
   "window.menuBarVisibility": "compact",
   "workbench.activityBar.location": "hidden",
   "editor.inlayHints.enabled": "off",
@@ -357,6 +351,16 @@
   "workbench.colorTheme": "No Clown Fiesta Theme",
   "files.autoSave": "onFocusChange",
   "breadcrumbs.enabled": false,
-  "window.zoomLevel": 1,
   "editor.stickyScroll.defaultModel": "foldingProviderModel",
+  "vim.showmodename": false,
+  "window.zoomLevel": 1,
+  "gitlens.statusBar.alignment": "left",
+  "gitlens.mode.statusBar.alignment": "left",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#5f00af",
+    "statusBar.noFolderBackground": "#5f00af",
+    "statusBar.debuggingBackground": "#5f00af",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
 }
