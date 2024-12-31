@@ -162,7 +162,7 @@
         "comment": "Move the current editor to a new window."
     },
     {
-        "key": "ctrl+shift+alt+c",
+        "key": "alt+c",
         "command": "workbench.action.clearRecentFiles",
         "comment": "Clear the list of recent files."
     },
@@ -173,7 +173,7 @@
         "comment": "Remove the command to copy the relative file path."
     },
     {
-        "key": "ctrl+shift+alt+f",
+        "key": "alt+f",
         "command": "inlineFold.toggle",
         "comment": "Toggle inline folding in the editor."
     },
@@ -444,7 +444,7 @@
         "comment": "Delete the selected file in the Explorer."
     },
     {
-        "key": "ctrl+shift+alt+s",
+        "key": "alt+s",
         "command": "workbench.action.toggleStatusbarVisibility",
         "comment": "Toggle the visibility of the status bar."
     },
@@ -502,7 +502,7 @@
         "comment": "Remove the command to start find and replace."
     },
     {
-        "key": "ctrl+shift+alt+w",
+        "key": "ctrl+alt+w",
         "command": "workbench.action.reloadWindow",
         "comment": "Reload the window when workspace trust is enabled."
     },
@@ -533,7 +533,7 @@
         "when": "chatEditingParticipantRegistered && chatIsEnabled && view != 'workbench.panel.chat.view.edits'"
     },
     {
-        "key": "ctrl+shift+alt+k",
+        "key": "alt+k",
         "command": "vim.remap",
         "args": {
             "after": [
@@ -545,7 +545,7 @@
         "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
-        "key": "ctrl+shift+alt+j",
+        "key": "alt+j",
         "command": "vim.remap",
         "args": {
             "after": [
@@ -557,7 +557,7 @@
         "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
-        "key": "ctrl+shift+alt+h",
+        "key": "alt+h",
         "command": "vim.remap",
         "args": {
             "after": [
@@ -569,7 +569,7 @@
         "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
-        "key": "ctrl+shift+alt+l",
+        "key": "alt+l",
         "command": "vim.remap",
         "args": {
             "after": [
@@ -601,11 +601,6 @@
         "when": "!isAuxiliaryWindowFocusedContext"
     },
     {
-        "key": "alt+c",
-        "command": "editor.action.dirtydiff.next",
-        "when": "editorTextFocus && !textCompareEditorActive"
-    },
-    {
         "key": "alt+f3",
         "command": "-editor.action.dirtydiff.next",
         "when": "editorTextFocus && !textCompareEditorActive"
@@ -614,10 +609,6 @@
         "key": "shift+;",
         "command": "vim.showQuickpickCmdLine",
         "when": "editorTextFocus && vim.mode == 'Normal'"
-    },
-    {
-        "key": "alt+s",
-        "command": "gitlens.gitCommands.status"
     },
     {
         "key": "alt+w alt+r",
@@ -640,6 +631,36 @@
     {
         "key": "ctrl+alt+c",  
         "command": "workbench.action.tasks.runTask",
-        "args": "Git: Dynamic Commit and Push"
+        "args": "Git: Pull, Commit, and Push"
+    },
+    {
+        "key": "ctrl+alt+l",  
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run ESLint Fix on .vue files"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchCaseSensitive",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchEditorCaseSensitive",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-gitlens.showQuickCommitFileDetails",
+        "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'alternate'"
     }
 ]
