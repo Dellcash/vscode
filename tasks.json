@@ -6,21 +6,45 @@
             "type": "promptString",
             "description": "Enter commit message:",
             "default": "Update changes"
+        },
+        {
+            "id": "eslintPath",
+            "type": "promptString",
+            "description": "Enter the path to lint (e.g., src/ or src/components/):",
+            "default": "src/"  
         }
     ],
     "tasks": [
         {
-            "label": "Git: Dynamic Commit and Push",
+            "label": "Git: Pull, Commit, and Push",
             "type": "shell",
             "command": "bash",
             "args": [
                 "-c",
-                "branchName=$(git rev-parse --abbrev-ref HEAD) && if git diff --quiet; then echo \"No changes to commit\" && exit 0; fi && git add . && git commit -m \"${input:commitMessage}\" && git push origin $branchName"
+                "git pull origin develop && branchName=$(git rev-parse --abbrev-ref HEAD) && if git diff --quiet; then echo \"No changes to commit\" && exit 0; fi && git add . && git commit -m \"${input:commitMessage}\" && git push origin $branchName"
             ],
             "problemMatcher": [],
             "presentation": {
                 "reveal": "always",
-                "panel": "new"
+                "panel": "new",
+                "focus": true
+            }
+        },
+        {
+            "label": "Run ESLint Fix on .vue files",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "eslint",
+                "--ext", ".vue",
+                "${input:eslintPath}",
+                "--fix"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
             }
         }
     ],
@@ -29,4 +53,5 @@
         "panel": "new"
     }
 }
+
 
