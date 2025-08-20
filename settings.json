@@ -2,13 +2,15 @@
   // Vim Settings
   "vim.scroll": 8,
   "vim.leader": ",",
-  "vim.sneak": false,
+  "vim.sneak": true,
   "vim.foldfix": true,
   "vim.showcmd": true,
+  "vim.surround": true,
   "vim.hlsearch": true,
   "vim.incsearch": true,
   "vim.smartcase": true,
   "vim.easymotion": true,
+  "vim.autoindent": true,
   "vim.useCtrlKeys": true,
   "vim.overrideCopy": true,
   "vim.sneakReplacesF": true,
@@ -27,100 +29,197 @@
     "<C-f>": false,
     "<C-k>": false,
     "<C-l>": false,
-    "<C-h>": false
+    "<C-h>": false,
   },
   "vim.insertModeKeyBindings": [
     {
-      "before": ["<C-c>"],
-      "after": ["<Esc>"]
-    },
-    {
-      "before": [";"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["/"],
-      "commands": ["actions.find"]
-    },
-    {
-      "before": ["<C-r>"],
-      "commands": ["editor.action.startFindReplaceAction"]
-    },
-    {
-      "before": [";"],
-      "after": ["<Esc>"]
-    },
-    {
-      "before": ["s"],
-      "after": []
-    },
-    {
-      "before": ["S"],
-      "after": []
-    },
-    {
-      "before": ["<space>"],
-      "commands": [
-      "workbench.action.files.saveFiles",
-      // "eslint.executeAutofix"
+      "before": [
+        "<C-c>"
+      ],
+      "after": [
+        "<Esc>"
       ]
     },
     {
-      "before": ["<C-]>"],
-    "commands": ["editor.action.marker.nextInFiles"]
-  },
-  {
-      "before": ["<C-[>"],
-      "commands": ["editor.action.marker.prevInFiles"]
+      "before": [
+        ";"
+      ],
+      "after": [
+        "<Esc>",
+        // "l"
+      ]
+    },
+    // {
+    //   "before": [
+    //     "<Esc>"
+    //   ],
+    //   "after": [
+    //     "<Esc>",
+    //     "l"
+    //   ]
+    // }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "/"
+      ],
+      "commands": [
+        "actions.find"
+      ]
     },
     {
-      "before": ["<leader>", "m"],
-      "commands": ["bookmarks.toggle"]
+      "before": [
+        "<C-r>"
+      ],
+      "commands": [
+        "editor.action.startFindReplaceAction"
+      ]
     },
     {
-      "before": ["<leader>", "b"],
-      "commands": ["bookmarks.list"]
+      "before": [
+        ";"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
+      "before": [
+        "f"
+      ],
+      "after": [
+        "s"
+      ]
     },
     {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
+      "before": [
+        "F"
+      ],
+      "after": [
+        "S"
+      ]
     },
     {
-      "before": ["K"],
-      "commands": ["lineBreakInsert"],
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "workbench.action.files.saveFiles",
+        // "eslint.executeAutofix"
+      ]
+    },
+    {
+      "before": [
+        "<C-]>"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<C-[>"
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
       "silent": true
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
     },
     {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
     },
     {
-      "before": ["p"],
-      "after": ["p", "g", "v", "y"]
+      "before": [
+        "p"
+      ],
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ]
     }
   ],
   "vim.matchpairs": "(:),{:},[:],<:>,>:<",
   "vim.commandLineModeKeyBindings": [
     {
-      "before": [":"],
+      "before": [
+        ":"
+      ],
       "commands": [
+        {
+          "command": "workbench.action.showCommands",
+          "args": []
+        }
+      ]
+    },
     {
-     "command": "workbench.action.showCommands",
-      "args": []
-      }
-     ]
+      "before": [
+        ":grep"
+      ],
+      "commands": [
+        "search.action.openNewEditor"
+      ]
     }
   ],
   // General Editor Settings
@@ -133,15 +232,14 @@
   "editor.fontFamily": "Consolas",
   "editor.smoothScrolling": true,
   "editor.codeActionsOnSave": {
-    // "source.fixAll": "never",
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll": "never",
+    // "source.fixAll.eslint": "never"
   },
   "editor.scrollbar.horizontalScrollbarSize": 5,
   "editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": true,
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.horizontal": "hidden",
   "editor.tabSize": 2,
-  "editor.cursorSmoothCaretAnimation": "on",
   "editor.wordWrap": "bounded",
   "editor.minimap.maxColumn": 190,
   "editor.minimap.scale": 3,
@@ -165,7 +263,7 @@
   "editor.lineNumbers": "off",
   // Language Specific Settings
   "[jsonc]": {
-  "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -203,7 +301,13 @@
   "html.autoClosingTags": true,
   "html.format.wrapAttributes": "force-expand-multiline",
   "eslint.format.enable": true,
-  "eslint.validate": [],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "typescript",
+    "typescriptreact"
+  ],
   "search.maxResults": 200,
   "window.title": "${dirty}${activeEditorMedium}",
   "window.titleSeparator": "-",
@@ -248,19 +352,18 @@
   "workbench.activityBar.location": "hidden",
   "editor.inlayHints.enabled": "off",
   "diffEditor.wordWrap": "off",
-  "glassit.alpha": 250,
+  "glassit.alpha": 255,
   "editor.letterSpacing": -0.1,
   "editor.fontWeight": "100",
   "security.workspace.trust.enabled": false,
-  "workbench.colorTheme": "No Clown Fiesta Theme",
+  // "workbench.colorTheme": "Cold Python Theme",
   "files.autoSave": "onFocusChange",
   "editor.stickyScroll.defaultModel": "foldingProviderModel",
   "vim.showmodename": false,
   "gitlens.statusBar.alignment": "left",
   "gitlens.mode.statusBar.alignment": "left",
-  "editor.cursorBlinking": "smooth",
   "editor.foldingImportsByDefault": false,
-  "editor.scrollBeyondLastLine": false,
+  "editor.scrollBeyondLastLine": true,
   "diffEditor.renderGutterMenu": false,
   "diffEditor.renderIndicators": false,
   "diffEditor.renderMarginRevertIcon": false,
@@ -275,14 +378,12 @@
   "screencastMode.verticalOffset": 0,
   "search.actionsPosition": "right",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#5f00af",
-    "statusBar.noFolderBackground": "#5f00af",
-    "statusBar.debuggingBackground": "#5f00af",
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff",
-    "activityBar.background": "#083427",
-    "titleBar.activeBackground": "#0C4936",
-    "titleBar.activeForeground": "#F2FDFA"
+    "titleBar.activeForeground": "#F2FDFA",
+    "statusBar.background": "#5f00af",
+    "statusBar.noFolderBackground": "#5f00af",
+    "statusBar.debuggingBackground": "#5f00af"
   },
   "editor.minimap.enabled": false,
   "window.dialogStyle": "custom",
@@ -293,18 +394,42 @@
   "window.closeWhenEmpty": false,
   "breadcrumbs.symbolSortOrder": "type",
   "workbench.editor.titleScrollbarSizing": "default",
-  "breadcrumbs.filePath": "last",
   "workbench.editor.showTabs": "none",
   "workbench.editor.tabSizing": "fixed",
   "window.density.editorTabHeight": "compact",
-  "files.autoSaveDelay": 0,
+  "files.autoSaveDelay": 100,
   "eslint.codeActionsOnSave.mode": "all",
-  "statsBar.modules": [
-    "memoUsage",
-    "cpuLoad"
-  ],
   "editor.formatOnSave": true,
-  "eslint.migration.2_x": "off",
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 2
+  "notebook.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActions.triggerOnFocusChange": true,
+  "gitlens.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "typescript.tsserver.maxTsServerMemory": 10072,
+  "files.autoSaveWhenNoErrors": true,
+  "editor.cursorBlinking": "phase",
+  // "searchEverywhere.include": "src/**/*.vue,src/**/*.js,src/**/*.ts,src/**/*.jsx,src/**/*.tsx,src/**/*.json,src/**/*.css,src/**/*.scss",
+  // // Minimal excludes
+  // "searchEverywhere.exclude": [
+  //   "**/node_modules/**",
+  //   "**/.git/**",
+  //   "**/dist/**"
+  // ],
+  // // Use extension's exclude mode
+  // "searchEverywhere.excludeMode": "search everywhere",
+  // // Force re-indexing
+  // "searchEverywhere.shouldWorkspaceDataBeCached": false,
+  // "searchEverywhere.shouldInitOnStartup": true,
+  // Open in the editor area instead of the terminal panel
+  // "find-it-faster.general.useTerminalInEditor": false,
+  // "find-it-faster.general.killTerminalAfterUse": true,
+  // "find-it-faster.general.useTerminalInEditor": false, // bottom panel
+  // // "terminal.integrated.defaultLocation": "panel",
+  // "find-it-faster.general.killTerminalAfterUse": true,
+  "terminal.integrated.defaultLocation": "view",
+  "terminal.integrated.allowChords": false,
+  "find-it-faster.general.useTerminalInEditor": false,
+  "find-it-faster.general.killTerminalAfterUse": true,
+  "find-it-faster.findFiles.showPreview": false,
+  "window.zoomLevel": 1,
 }
