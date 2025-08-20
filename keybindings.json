@@ -173,11 +173,6 @@
         "comment": "Remove the command to copy the relative file path."
     },
     {
-        "key": "alt+f",
-        "command": "inlineFold.toggle",
-        "comment": "Toggle inline folding in the editor."
-    },
-    {
         "key": "ctrl+shift+alt+n",
         "command": "notifications.clearAll",
         "comment": "Clear all notifications."
@@ -422,14 +417,26 @@
     {
         "key": "ctrl+h",
         "command": "cursorLeft",
-        "when": "editorTextFocus",
-        "comment": "Move the cursor left."
+        "when": "editorTextFocus && vim.mode == 'Insert'",
+        "comment": "Move the cursor left only in INSERT mode."
     },
     {
         "key": "ctrl+l",
         "command": "cursorRight",
-        "when": "editorTextFocus",
-        "comment": "Move the cursor right."
+        "when": "editorTextFocus && vim.mode == 'Insert'",
+        "comment": "Move the cursor right only in INSERT mode."
+    },
+    {
+        "key": "ctrl+k",
+        "command": "cursorUp",
+        "when": "editorTextFocus && vim.mode == 'Insert'",
+        "comment": "Move the cursor up only in INSERT mode."
+    },
+    {
+        "key": "ctrl+j",
+        "command": "cursorDown",
+        "when": "editorTextFocus && vim.mode == 'Insert'",
+        "comment": "Move the cursor down only in INSERT mode."
     },
     {
         "key": "ctrl+f r",
@@ -629,12 +636,12 @@
         "command": "-editor.action.toggleWordWrap"
     },
     {
-        "key": "ctrl+alt+c",  
+        "key": "ctrl+alt+c",
         "command": "workbench.action.tasks.runTask",
-        "args": "Git: Pull, Commit, and Push"
+        "args": "Git: Handle Changes and Pull"
     },
     {
-        "key": "ctrl+alt+l",  
+        "key": "ctrl+alt+l",
         "command": "workbench.action.tasks.runTask",
         "args": "Run ESLint Fix on .vue files"
     },
@@ -662,5 +669,45 @@
         "key": "alt+c",
         "command": "-gitlens.showQuickCommitFileDetails",
         "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "[",
+        "command": "editor.fold",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "]",
+        "command": "editor.unfold",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "find-it-faster.findWithinFiles"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "-find-it-faster.findWithinFiles"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "find-it-faster.findFiles"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "-find-it-faster.findFiles"
+    },
+    {
+        "key": "ctrl+shift+alt+f",
+        "command": "inlineFold.toggle"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "actions.find",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "actions.find",
+        "when": "editorTextFocus && vim.mode == 'Insert'"
     }
 ]
