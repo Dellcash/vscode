@@ -628,7 +628,7 @@
         "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen || terminalFocus && terminalIsOpen && terminalProcessSupported"
     },
     {
-        "key": "alt+w alt+r",
+        "key": "alt+t",
         "command": "editor.action.toggleWordWrap"
     },
     {
@@ -681,17 +681,17 @@
         "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
-        "key": "ctrl+shift+f",
+        "key": "alt+f",
         "command": "find-it-faster.findWithinFiles"
     },
     {
         "key": "ctrl+shift+u",
         "command": "-find-it-faster.findWithinFiles"
     },
-    {
-        "key": "ctrl+p",
-        "command": "find-it-faster.findFiles"
-    },
+    // {
+    //     "key": "ctrl+p",
+    //     "command": "find-it-faster.findFiles"
+    // },
     {
         "key": "ctrl+shift+j",
         "command": "-find-it-faster.findFiles"
@@ -709,5 +709,135 @@
         "key": "ctrl+f",
         "command": "actions.find",
         "when": "editorTextFocus && vim.mode == 'Insert'"
+    },
+    // // Remove the default window zoom so our bindings take over
+    {
+        "key": "ctrl+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "-workbench.action.zoomReset"
+    },
+    {
+        "key": "ctrl+numpad_add",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+numpad_subtract",
+        //     "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+numpad0",
+        "command": "-workbench.action.zoomReset"
+    },
+    // Bind Ctrl+ / Ctrl- to editor-only font zoom
+    {
+        "key": "ctrl+=",
+        "command": "editor.action.fontZoomIn",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+=",
+        "command": "editor.action.fontZoomIn",
+        "when": "editorTextFocus"
+    }, // for layouts where + requires Shift
+    {
+        "key": "ctrl+-",
+        "command": "editor.action.fontZoomOut",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+-",
+        "command": "editor.action.fontZoomOut",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "editor.action.fontZoomReset",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+numpad_add",
+        "command": "editor.action.fontZoomIn",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+numpad_subtract",
+        "command": "editor.action.fontZoomOut",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+numpad0",
+        "command": "editor.action.fontZoomReset",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.gotoSymbol",
+        "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "-workbench.action.gotoSymbol",
+        "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "workbench.action.quickOpen",
+        "args": "@template ",
+        "when": "editorLangId == vue"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "workbench.action.quickOpen",
+        "args": "@script setup",
+        "when": "editorLangId == vue"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "workbench.action.quickOpen",
+        "args": "@style scoped",
+        "when": "editorLangId == vue"
+    },
+    {
+        "key": "ctrl+alt+x",
+        "command": "-glassit.minimize"
+    },
+    {
+        "key": "ctrl+alt+x",
+        "command": "glassit.decrease"
+    },
+    {
+        "key": "ctrl+alt+c",
+        "command": "-glassit.decrease"
+    },
+    {
+        "key": "alt+a",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "down",
+        "command": "editorScroll",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "to": "down",
+            "by": "line",
+            "revealCursor": false
+        }
+    },
+    {
+        "key": "up",
+        "command": "editorScroll",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "to": "up",
+            "by": "line",
+            "revealCursor": false
+        }
     }
 ]
