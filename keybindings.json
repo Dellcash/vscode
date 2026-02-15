@@ -839,5 +839,84 @@
             "by": "line",
             "revealCursor": false
         }
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.terminal.focusAtIndex1"
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.action.terminal.focusAtIndex2"
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.action.terminal.focusAtIndex3"
+    },
+    {
+        "key": "alt+p l",
+        "command": "workbench.action.positionPanelLeft"
+    },
+    {
+        "key": "alt+p r",
+        "command": "workbench.action.positionPanelRight"
+    },
+    {
+        "key": "alt+p b",
+        "command": "workbench.action.positionPanelBottom"
+    },
+    {
+        "key": "alt+p t",
+        "command": "workbench.action.positionPanelTop"
+    },
+    {
+        "key": "alt+h",
+        "command": "-gitlens.showQuickFileHistory",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+h",
+        "command": "-testing.toggleTestingPeekHistory",
+        "when": "testing.isPeekVisible"
+    },
+    {
+        "key": "alt+h",
+        "command": "-editor.action.accessibilityHelpOpenHelpLink",
+        "when": "accessibilityHelpIsShown"
+    },
+    {
+        "key": "ctrl+shift+alt+a",
+        "command": "codeium.diffActionAccept",
+        "when": "editorTextFocus && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "alt+a",
+        "command": "-codeium.diffActionAccept",
+        "when": "editorTextFocus && !inlineSuggestionsVisible"
+    },
+    // {
+    //     "key": "alt+f",
+    //     "command": "search.action.openNewEditor"
+    // }
+    {
+        "key": "alt+f",
+        "command": "search.action.openEditor",
+        "when": "!searchEditorVisible"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "searchEditorVisible"
+    },
+    {
+        "key": "ctrl+alt+`",
+        "command": "terminal.createTerminalEditor"
+    },
+    {
+        "key": "alt+e s",
+        "command": "toggleexcludedfiles.show"
+    },
+    {
+        "key": "alt+e h",
+        "command": "toggleexcludedfiles.restore"
     }
 ]
