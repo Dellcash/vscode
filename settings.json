@@ -231,7 +231,7 @@
   "editor.autoIndent": "advanced",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnPaste": true,
-  "editor.fontFamily": "Consolas",
+  // "editor.fontFamily": "Consolas",
   "editor.smoothScrolling": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
@@ -255,25 +255,23 @@
   "editor.guides.bracketPairs": false,
   "editor.guides.indentation": false,
   "editor.renderLineHighlight": "none",
-  "editor.fontLigatures": true,
+  // "editor.fontLigatures": true,
   "editor.wrappingIndent": "deepIndent",
   "editor.wordWrapColumn": 100,
   "editor.minimap.showSlider": "always",
   "editor.hideCursorInOverviewRuler": true,
   "editor.overviewRulerBorder": false,
-  "editor.lineHeight": 20,
-  "editor.lineNumbers": "off",
   // Language Specific Settings
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.letterSpacing": -0.7,
-    "editor.fontWeight": "100",
+    "editor.letterSpacing": 0.7,
+    // "editor.fontWeight": "100",
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "off",
-    "editor.lineHeight": 1.1
+    "editor.lineHeight": 1
   },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
@@ -283,8 +281,6 @@
   "window.autoDetectHighContrast": false,
   "window.commandCenter": false,
   "zenMode.showTabs": "none",
-  // Terminal Settings
-  "terminal.integrated.tabs.enabled": false,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   // Git and Version Control
@@ -335,7 +331,7 @@
   "workbench.tree.indent": 15,
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "none",
-  "workbench.sideBar.location": "left",
+  "workbench.sideBar.location": "right",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.centeredLayoutFixedWidth": true,
   "workbench.editor.highlightModifiedTabs": true,
@@ -351,9 +347,7 @@
   "editor.showFoldingControls": "never",
   "editor.inlayHints.enabled": "off",
   "diffEditor.wordWrap": "on",
-  "glassit.alpha": 240,
-  "editor.letterSpacing": -0.1,
-  "editor.fontWeight": "100",
+  "glassit.alpha": 255,
   "security.workspace.trust.enabled": false,
   // "workbench.colorTheme": "Cold Python Theme",
   "files.autoSave": "onFocusChange",
@@ -369,7 +363,7 @@
   "workbench.remoteIndicator.showExtensionRecommendations": true,
   "workbench.sash.hoverDelay": 100,
   "workbench.tree.renderIndentGuides": "onHover",
-  "screencastMode.fontSize": 20,
+  "screencastMode.fontSize": 14,
   "screencastMode.keyboardOptions": {
     "showSingleEditorCursorMoves": false
   },
@@ -420,7 +414,6 @@
   "find-it-faster.general.useTerminalInEditor": false,
   "find-it-faster.general.killTerminalAfterUse": true,
   "find-it-faster.findFiles.showPreview": false,
-  "window.menuBarVisibility": "toggle",
   "editor.mouseWheelZoom": true,
   "editor.fontSize": 14,
   "window.zoomLevel": 1,
@@ -430,15 +423,96 @@
   // "window.zoomLevel": 2,
   // "window.zoomLevel": -1
   "editor.scrollBeyondLastLine": true,
-  // "workbench.colorCustomizations": {
-  //   "terminal.background": "#c8c8c8",
-  //   "terminal.foreground": "#000000",
-  // },
-  "workbench.colorTheme": "No Clown Fiesta Theme",
   "workbench.panel.showLabels": false,
   "terminal.integrated.stickyScroll.enabled": true,
-  "workbench.activityBar.location": "hidden",
-  "terminal.integrated.fontSize": 10,
+  "terminal.integrated.fontSize": 9.5,
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.tabs.enabled": false,
+  "editor.fontFamily": "JetBrains Mono, monospace",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'calt'",
+  "workbench.colorTheme": "No Clown Fiesta Theme",
+  "editor.letterSpacing": 3,
+  "editor.fontWeight": "600",
+  "editor.lineNumbers": "off",
+  "editor.lineHeight": 1.2,
+  "vim.statusBarColorControl": false,
+  "vim.statusBarColors.insert": [
+    "#000",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.normal": [
+    "#000",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.replace": [
+    "#00000",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.visual": [
+    "#00000",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.visualblock": [
+    "#00000",
+    "#ffffff"
+  ],
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#000",
+    "statusBar.noFolderBackground": "#000",
+    "statusBar.debuggingBackground": "#000",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.nuxt/**": true,
+    "**/.next/**": true,
+    "**/.cache/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true
+  },
+  "search.followSymlinks": false,
+  "editor.renderControlCharacters": false,
+  "editor.renderWhitespace": "none",
+  "search.mode": "view",
+  "files.exclude": {
+    "**/coverage": true,
+    "**/external": true,
+    "**/nginx_conf": true,
+    "**/node_modules": true,
+    "**/postcss.config.js": true,
+    "**/index.html": true,
+    "**/.dockerignore": true,
+    "**/.editorconfig": true,
+    "**/.env": true,
+    "**/.eslintrc-auto-import.json": true,
+    "**/.gitmodules": true,
+    "**/.npmrc": true,
+    "**/auto-imports.d.ts": true,
+    "**/docker-compose.yml": true,
+    "**/Dockerfile": true,
+    "**/eslint.config.js": true,
+    "**/quasar.config.js.temporary.compiled.1764400853284.mjs": true,
+    "**/quasar.config.js.temporary.compiled.1764996553790.mjs": true,
+    "**/quasar.config.js.temporary.compiled.1764996567725.mjs": true,
+    "**/quasar.extensions.json": true,
+    "**/README.md": true,
+    "**/jsconfig.json": true,
+    "**/.gitlab-ci.yml": true,
+    "**/.gitignore": true,
+    "**/public": true,
+    "**/.github": true,
+    "**/.quasar": true,
+    "**/.vscode": true
+  },
+  "workbench.statusBar.visible": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.activityBar.location": "hidden",
 }
